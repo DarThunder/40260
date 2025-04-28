@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica imagenes</title>
+    <style>
+      .redonda {
+        box-shadow: 10px 10px 20px rgb(46, 24, 212);
+        border-radius: 10% 40% 30% 70%;
+      }
+      img {
+        box-shadow: 10px 10px 20px red;
+        border-radius: 100%;
+      }
+      figure {
+        text-align: center;
+        width: 200px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ño che</h1>
+
+    <div id="imageDiv"></div>
+
+    <script>
+      let div = document.getElementById("imageDiv");
+      let names = { 1: "Jonh", 2: "Jane", 3: "Dennis" };
+
+      const picture = (id) => {
+        return `<figure class = "naco y estupido">
+            <img src="https://picsum.photos/id/${id}/200/200" alt="Foto ${names[id]}">
+            <figcaption>${names[id]}</figcaption>
+        </figure>`;
+      };
+
+      for (i = 1; i <= 3; i++) {
+        if (i % 3 === 0) {
+          div.innerHTML += "<br>";
+        }
+        div.innerHTML += picture(i);
+      }
+
+      const imgArr = div.querySelectorAll("img");
+      imgArr.forEach((img) => {
+        img.addEventListener("click", () => {
+          img.classList.toggle("redonda");
+        });
+      });
+    </script>
+  </body>
+</html>
