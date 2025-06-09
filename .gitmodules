@@ -4,3 +4,6 @@
 [submodule "poema"]
 	path = poema
 	url = https://github.com/DarThunder/poema
+[submodule "ordinario-ftw"]
+	path = ordinario-ftw
+	url = https://github.com/DarThunder/ordinario-ftw

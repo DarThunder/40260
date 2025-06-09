@@ -1,0 +1,18 @@
+{
+  "version": 3,
+  "sources": [
+    "../pagina02/myFunctionP02.js"
+  ],
+  "sourcesContent": [
+    "export const myFunction = (cds) => {\r\n  let table = \"<tr><th>Artist</th><th>Title</th></tr>\";\r\n  Array.from(cds).forEach((cd) => {\r\n    const artist = cd.getElementsByTagName(\"ARTIST\")[0]?.textContent || \"N/A\";\r\n    const title = cd.getElementsByTagName(\"TITLE\")[0]?.textContent || \"N/A\";\r\n    table += `<tr><td>${artist}</td><td>${title}</td></tr>`;\r\n  });\r\n  document.getElementById(\"demo\").innerHTML = table;\r\n};\r\n"
+  ],
+  "mappings": "MAAO,IAAMA,EAAcC,GAAQ,CACjC,IAAIC,EAAQ,yCACZ,MAAM,KAAKD,CAAG,EAAE,QAASE,GAAO,CAC9B,IAAMC,EAASD,EAAG,qBAAqB,QAAQ,EAAE,CAAC,GAAG,aAAe,MAC9DE,EAAQF,EAAG,qBAAqB,OAAO,EAAE,CAAC,GAAG,aAAe,MAClED,GAAS,WAAWE,CAAM,YAAYC,CAAK,YAC7C,CAAC,EACD,SAAS,eAAe,MAAM,EAAE,UAAYH,CAC9C",
+  "names": [
+    "myFunction",
+    "cds",
+    "table",
+    "cd",
+    "artist",
+    "title"
+  ]
+}
